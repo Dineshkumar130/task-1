@@ -17,7 +17,7 @@ body{
 
 
 .left {
-  flex: 1;
+  flex: 1.2;
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -105,12 +105,44 @@ body{
 
 
 @media (max-width: 768px) {
-  .content {
-    padding: 2rem;
+
+  .card {
+    flex-direction: column;
+    max-width: 90%;
     text-align: center;
   }
 
+  .image {
+    order: -1; /* image goes on top */
+    width: 100%;
+    height: 240px;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .left {
+    padding: 2rem 1.5rem;
+  }
+
+  .content {
+    margin-bottom: 2rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
   .stats {
-    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
